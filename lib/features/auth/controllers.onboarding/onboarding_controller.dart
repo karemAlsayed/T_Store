@@ -6,27 +6,40 @@ class OnBoardingController extends GetxController {
 
   final pageController = PageController();
   RxInt currentPageIndex = 0.obs;
+  int totalPages = 3; // Number of pages in the onboarding process
 
-  void updatePageIndicator(index) {
-      currentPageIndex.value = index;
+  void updatePageIndicator(int index) {
+    currentPageIndex.value = index;
   }
 
-  void dotNavigationClick(index) {
+  void dotNavigationClick(int index) {
     currentPageIndex.value = index;
-    pageController.jumpToPage(index);
+    pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
   }
 
   void nextPage() {
-    if (currentPageIndex.value == 2) {
-      // Get.to();
-    }else{
+    if (currentPageIndex.value == totalPages - 1) {
+    //  Get.toNamed('/home'); // Navigate to the next screen when done
+    } else {
       currentPageIndex.value++;
-      pageController.jumpToPage(currentPageIndex.value);
+      pageController.animateToPage(
+        currentPageIndex.value,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
     }
   }
 
   void skipPage() {
-    currentPageIndex.value = 2;
-    pageController.jumpToPage(2);
+    currentPageIndex.value = totalPages - 1;
+    pageController.animateToPage(
+      totalPages - 1,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
   }
 }
