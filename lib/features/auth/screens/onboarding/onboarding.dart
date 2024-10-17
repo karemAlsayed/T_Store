@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:store_app/features/auth/controllers.onboarding/onboarding_controller.dart';
-import 'package:store_app/features/auth/screens.onboarding/widgets/onBoarding_dot_navigation.dart';
-import 'package:store_app/features/auth/screens.onboarding/widgets/on_boarding_next_button.dart';
-import 'package:store_app/features/auth/screens.onboarding/widgets/onboarding_page.dart';
-import 'package:store_app/features/auth/screens.onboarding/widgets/onboarding_skip.dart';
+import 'package:store_app/features/auth/screens/onboarding/controllers/onboarding_controller.dart';
+import 'package:store_app/features/auth/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:store_app/features/auth/screens/onboarding/widgets/on_boarding_next_button.dart';
+import 'package:store_app/features/auth/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:store_app/features/auth/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:store_app/utils/constants/image_strings.dart';
 import 'package:store_app/utils/constants/text_strings.dart';
 class OnBoardingScreen extends StatelessWidget {
@@ -38,7 +38,7 @@ class OnBoardingScreen extends StatelessWidget {
               )
             ],
           ),
-          const OnBoardingSkip(),
+          const  OnBoardingSkip(),
           const OnBoardingNavigation(),
           const OnBoardingNextButton()
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:store_app/features/auth/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
@@ -23,7 +24,7 @@ class OnBoardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == totalPages - 1) {
-    //  Get.toNamed('/home'); // Navigate to the next screen when done
+      Get.offAll(const LoginScreen());
     } else {
       currentPageIndex.value++;
       pageController.animateToPage(
