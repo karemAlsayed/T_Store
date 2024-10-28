@@ -15,7 +15,7 @@ class THomeAppbar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(TTexts.homeAppbarTitle,style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.grey),),
-        Text(TTexts.homeAppbarSubTitle,style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white),)
+        Text('Kareem',style: Theme.of(context).textTheme.headlineSmall!.apply(color: TColors.white),)
       ],
     ), showBackButton: false,
     actions:  [
