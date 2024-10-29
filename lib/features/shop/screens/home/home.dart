@@ -60,6 +60,11 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   const TPromoSlider(), 
                    const SizedBox(height: TSizes.spaceBtwSections*1.5,),
+                  const TSectionHeading(
+                    title: 'Trending Products',
+                    
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
                   TGridLayout(
                     itemCount: 10,
                     itemBuilder: (context, index) {
