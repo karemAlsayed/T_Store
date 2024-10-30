@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/utils/constants/colors.dart';
 import 'package:store_app/utils/constants/sizes.dart';
+import 'package:store_app/utils/helpers/helper_functions.dart';
 
 class TCircularIMage extends StatelessWidget {
   const TCircularIMage({
     super.key,
-    required this.dark,
+    
     this.fit = BoxFit.cover,
     required this.image,
-    required this.isNetworkImage,
+     this.isNetworkImage =false,
     this.overLayColor,
     this.backgroundColor,
     this.height = 56,
@@ -16,7 +17,7 @@ class TCircularIMage extends StatelessWidget {
     this.padding =TSizes.sm,
   });
 
-  final bool dark;
+  
   final BoxFit? fit;
   final String image;
   final bool isNetworkImage;
@@ -25,11 +26,12 @@ class TCircularIMage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: backgroundColor ?? (dark ? TColors.black : TColors.white),
+         color: backgroundColor ?? (dark ? TColors.black : TColors.white),
         borderRadius: BorderRadius.circular(100),
       ),
       child: Image(
