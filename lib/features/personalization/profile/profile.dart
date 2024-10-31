@@ -4,7 +4,6 @@ import 'package:store_app/common/widgets/appbar/appbar.dart';
 
 import 'package:store_app/common/widgets/texts/section_heading.dart';
 import 'package:store_app/features/personalization/profile/widgets/profile_menu.dart';
-import 'package:store_app/utils/constants/colors.dart';
 import 'package:store_app/utils/constants/image_strings.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 
