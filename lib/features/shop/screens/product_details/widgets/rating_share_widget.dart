@@ -12,8 +12,7 @@ class TRaitngAndShare extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-          right: TSizes.defaultSpace,
-          left: TSizes.defaultSpace,
+        
           bottom: TSizes.defaultSpace/3),
       child: Column(
         children: [
