@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:store_app/common/widgets/texts/section_heading.dart';
@@ -9,6 +10,7 @@ import 'package:store_app/features/shop/screens/product_details/widgets/product_
 import 'package:store_app/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:store_app/features/shop/screens/product_details/widgets/product_metadata.dart';
 import 'package:store_app/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:store_app/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -17,7 +19,7 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const TBottomAddToCart() ,
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -58,33 +60,36 @@ class ProductDetails extends StatelessWidget {
                       trimLines: 2,
                       trimCollapsedText: 'Show more',
                       trimExpandedText: 'Show less',
-                      moreStyle: TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w800),
-                      lessStyle: TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w800),
+                      moreStyle:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                      lessStyle:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
                     ),
                     const SizedBox(
-                      height: TSizes.spaceBtwSections/2,
+                      height: TSizes.spaceBtwSections / 2,
                     ),
                     const Divider(),
                     const SizedBox(
-                      height: TSizes.spaceBtwSections/2,
+                      height: TSizes.spaceBtwSections / 2,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const TSectionHeading(
-                            title: 'Reviews (157)', showActionButton: false,),
-
-                            IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_3),),
-
+                          title: 'Reviews (157)',
+                          showActionButton: false,
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            Get.to(() => const ProductReviewsScreen());
+                          },
+                          icon: const Icon(Iconsax.arrow_right_3),
+                        ),
                       ],
                     ),
                     const SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
-                  
-                  
                   ],
                 ),
               ),
