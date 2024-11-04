@@ -6,7 +6,10 @@ import 'package:store_app/common/widgets/custom_shapes/containers/primary_header
 import 'package:store_app/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:store_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:store_app/common/widgets/texts/section_heading.dart';
+import 'package:store_app/features/personalization/address/address.dart';
 import 'package:store_app/features/personalization/profile/profile.dart';
+import 'package:store_app/features/shop/screens/cart/cart.dart';
+import 'package:store_app/features/shop/screens/orders/order.dart';
 import 'package:store_app/utils/constants/colors.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 
@@ -69,20 +72,30 @@ class Settingsscreen extends StatelessWidget {
                           const SizedBox(
                             height: TSizes.spaceBtwItems,
                           ),
-                          const TSettingMenuTile(
+                           TSettingMenuTile(
                             icon: Iconsax.safe_home,
                             title: 'My Address',
                             subtitle: 'Set your default address',
+                            onTap: (){
+                              Get.to(() => const UserAddressScreen());
+
+                            },
                           ),
-                          const TSettingMenuTile(
+                           TSettingMenuTile(
                             icon: Iconsax.shopping_cart,
                             title: 'My Cart',
                             subtitle: 'Add, remove products from cart',
+                            onTap: () {
+                              Get.to(() => const CartScreen());
+                            },
                           ),
-                          const TSettingMenuTile(
+                           TSettingMenuTile(
                             icon: Iconsax.bag_tick,
                             title: 'My Orders',
                             subtitle: 'Manage your orders',
+                            onTap:() {
+                              Get.to(() => const OrderScreen());
+                            },
                           ),
                           const TSettingMenuTile(
                             icon: Iconsax.bank,
