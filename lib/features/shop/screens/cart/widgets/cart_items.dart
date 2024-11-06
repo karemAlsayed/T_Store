@@ -23,15 +23,15 @@ class TCartItems extends StatelessWidget {
       itemCount: items,
       itemBuilder: (_, index) =>  TRoundedContainer(
         showBorder: true,
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
             horizontal: TSizes.defaultSpace, vertical: TSizes.defaultSpace / 2),
         child: Column(
           children: [
-            TCartItem(),
-            if(showAddButton)SizedBox(
+            const TCartItem(),
+            if(showAddButton)const SizedBox(
               height: TSizes.spaceBtwItems,
             ),
-             if(showAddButton) Row(
+             if(showAddButton) const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
