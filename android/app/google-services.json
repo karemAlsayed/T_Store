@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "910074257593",
+    "project_id": "t-store-2152c",
+    "storage_bucket": "t-store-2152c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910074257593:android:1c7e5e0a025d40e2987b68",
+        "android_client_info": {
+          "package_name": "com.tstore.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ1-EDMP6agjojnU6Ki1OPOFhoe10weiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
