@@ -7,20 +7,12 @@ abstract class AuthFirebaseServices {
   Future<Either> logout();
   Future<Either> resetPassword({required String email});
   Future<Either> sendEmailVerification();
-  Future<bool> isVerifiedEmail();
 }
 
-
-class AuthFirebaseServicesImpl extends AuthFirebaseServices{
+class AuthFirebaseServicesImpl extends AuthFirebaseServices {
   @override
   Future<bool> isLoggedIn() {
     // TODO: implement isLoggedIn
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<bool> isVerifiedEmail() {
-    // TODO: implement isVerifiedEmail
     throw UnimplementedError();
   }
 
@@ -53,5 +45,4 @@ class AuthFirebaseServicesImpl extends AuthFirebaseServices{
     // TODO: implement signup
     throw UnimplementedError();
   }
-
 }
