@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:store_app/features/auth/screens/onboarding/controllers/onboarding_controller.dart';
+import 'package:store_app/features/auth/presentation/onboarding/controllers/onboarding_controller.dart';
 import 'package:store_app/navigation_menu.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 import 'package:store_app/utils/device/device_utility.dart';

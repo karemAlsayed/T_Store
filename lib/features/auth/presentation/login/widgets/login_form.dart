@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:store_app/features/auth/screens/password_config/forget_password.dart';
-import 'package:store_app/features/auth/screens/signup/signup.dart';
+import 'package:store_app/features/auth/presentation/password_config/forget_password.dart';
+import 'package:store_app/features/auth/presentation/signup/signup.dart';
 import 'package:store_app/navigation_menu.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 import 'package:store_app/utils/constants/text_strings.dart';
