@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:910074257593:android:1c7e5e0a025d40e2987b68",
         "android_client_info": {
-          "package_name": "com.tstore.app"
+          "package_name": "com.example.store_app"
         }
       },
       "oauth_client": [],

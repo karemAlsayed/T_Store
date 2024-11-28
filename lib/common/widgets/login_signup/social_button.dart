@@ -22,7 +22,9 @@ class TSocialButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
             border: Border.all(color: dark ? TColors.darkerGrey : TColors.grey),
           ),
-          child: IconButton(onPressed: (){}, icon: 
+          child: IconButton(onPressed: (){
+
+          }, icon: 
           Image.asset(TImages.google,
           height: TSizes.iconLg,
           width: TSizes.iconLg,
@@ -34,7 +36,9 @@ class TSocialButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
             border: Border.all(color: dark ? TColors.darkerGrey : TColors.grey),
           ),
-          child: IconButton(onPressed: (){}, icon: 
+          child: IconButton(onPressed: (){
+            
+          }, icon: 
           Image.asset(TImages.facebook,
           height: TSizes.iconLg,
           width: TSizes.iconLg,
