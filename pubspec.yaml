@@ -58,11 +58,8 @@ dependencies:
   cloud_firestore: ^4.17.2
   firebase_storage: ^11.7.4
   flutter_launcher_icons: ^0.14.1
-<<<<<<< HEAD
   google_sign_in: ^6.2.2
-=======
   dartz: ^0.10.1
->>>>>>> 54caa01c3c3e44fcfd232cd4b80d228040d75b4d
 
 
 
