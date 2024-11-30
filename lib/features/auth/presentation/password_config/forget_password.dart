@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:store_app/features/auth/screens/password_config/reset_password.dart';
+import 'package:store_app/features/auth/presentation/password_config/reset_password.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 import 'package:store_app/utils/constants/text_strings.dart';
 

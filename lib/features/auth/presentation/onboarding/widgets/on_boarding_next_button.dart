@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:store_app/features/auth/screens/onboarding/controllers/onboarding_controller.dart';
+import 'package:store_app/features/auth/presentation/onboarding/controllers/onboarding_controller.dart';
 import 'package:store_app/utils/constants/colors.dart';
 import 'package:store_app/utils/constants/sizes.dart';
 import 'package:store_app/utils/device/device_utility.dart';
