@@ -1,7 +1,8 @@
 
  import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:store_app/features/auth/presentation/onboarding/onboarding.dart';
+import 'package:store_app/bindings/general_bindings.dart';
+import 'package:store_app/utils/constants/colors.dart';
 import 'package:store_app/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -14,7 +15,11 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: const OnBoardingScreen(),
+      initialBinding:  GeneralBindings(),
+      home:const Scaffold(
+        backgroundColor: TColors.primary,
+        body: Center(child: CircularProgressIndicator(color: TColors.white,)),
+      ),
     );
   }
 }

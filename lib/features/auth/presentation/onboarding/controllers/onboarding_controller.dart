@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:store_app/features/auth/presentation/login/login.dart';
 
 class OnBoardingController extends GetxController {
@@ -24,6 +25,8 @@ class OnBoardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == totalPages - 1) {
+      final storage = GetStorage();
+      storage.write('isFirstTime', false);
       Get.offAll(const LoginScreen());
     } else {
       currentPageIndex.value++;
@@ -37,6 +40,8 @@ class OnBoardingController extends GetxController {
 
   void skipPage() {
     currentPageIndex.value = totalPages - 1;
+    final storage = GetStorage();
+    storage.write('isFirstTime', false);
     pageController.animateToPage(
       totalPages - 1,
       duration: const Duration(milliseconds: 300),

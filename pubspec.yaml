@@ -60,6 +60,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.1
   google_sign_in: ^6.2.2
   dartz: ^0.10.1
+  supabase_flutter: ^2.8.1
 
 
 
