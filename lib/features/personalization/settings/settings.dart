@@ -6,6 +6,7 @@ import 'package:store_app/common/widgets/custom_shapes/containers/primary_header
 import 'package:store_app/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:store_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:store_app/common/widgets/texts/section_heading.dart';
+import 'package:store_app/data/repos/auth_repo.dart';
 import 'package:store_app/features/personalization/address/address.dart';
 import 'package:store_app/features/personalization/profile/profile.dart';
 import 'package:store_app/features/shop/screens/cart/cart.dart';
@@ -52,7 +53,8 @@ class Settingsscreen extends StatelessWidget {
                       ),
                        TUserProfileTile(
                         onTap: () {
-                          Get.to(() => const ProfileScreen());
+                           Get.to(() => const ProfileScreen());
+                          
                         },
             
                       ),
@@ -150,6 +152,18 @@ class Settingsscreen extends StatelessWidget {
                             subtitle: 'The image quality will be high',
                             trailing: Switch(value: false, onChanged: (value) {}),
                           ),
+                          const SizedBox(
+                            height: TSizes.spaceBtwSections,
+                          ),
+                          Center(
+                  child: TextButton(
+                onPressed: () {
+                  AuthenticationRepository.instance.logout();
+                },
+                child: Text('Logout',
+                    style: Theme.of(context).textTheme.bodyLarge!.apply(
+                        color: Colors.red,)),
+              ))
                         ],
                       ))
                 ],

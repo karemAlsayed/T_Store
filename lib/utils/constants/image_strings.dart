@@ -44,6 +44,26 @@ class TImages {
   static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-man-receives-a-mail.png";
   static const String verifyIllustration = "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
 
+
+  // -- Lottie Animations --
+static String cartAnimation = "assets/images/animations/lady-adding-product-in-cart-animation.json";
+static String orderCompletedAnimation = "assets/images/animations/order-complete-car-delivery-animation.json";
+static String packageAnimation = "assets/images/animations/98783-packaging-in-progress.json";
+static String paperPlaneAnimation = "assets/images/animations/paper-plane.json";
+static String carAnimation = "assets/images/animations/136491-animation-lottie-car-rides.json";
+static String pencilAnimation = "assets/images/animations/141729-pencil-drawing.json";
+static String docerAnimation = "assets/images/animations/145149-animation-of-docer.json";
+static String searchAnimation = "assets/images/animations/72758-searching.json";
+static String emptyAnimation = "assets/images/animations/72758-empty.json";
+static String securityAnimation = "assets/images/animations/67263-security-icon-transparent.json";
+static String successfullyRegisterAnimation = "assets/images/animations/72462-check-register.json";
+static String thankYouAnimation = "assets/images/animations/164308-thank-you.json";
+static String paymentSuccessfulAnimation = "assets/images/animations/120978-payment-successful.json";
+static String loadingJuggleAnimation = "assets/images/animations/143397-loading-juggle.json";
+static String cloudUploadingAnimation = "assets/images/animations/cloud-uploading-animation.json";
+static String loaderAnimation = "assets/images/animations/loader-animation.json";
+
+
   // -- OnBoarding Texts
   static const String onBoardingImage1 = "assets/images/on_boarding_images/sammy-line-searching.gif";
   static const String onBoardingImage2 = "assets/images/on_boarding_images/sammy-line-shopping.gif";

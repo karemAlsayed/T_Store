@@ -53,4 +53,18 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong.';
     }
   }
+
+  Future<void> logout() async {
+    try {
+      await _auth.signOut();
+    } on AuthException catch (e) {
+      throw e.message;
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } catch (e) {
+      throw 'Something went wrong.';
+    }
+  }
 }
