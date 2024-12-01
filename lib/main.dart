@@ -16,7 +16,8 @@ Future<void> main() async {
 
   await Supabase.initialize(
     url: 'https://epvnxmwgiwmkcwyhqgpe.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwdm54bXdnaXdta2N3eWhxZ3BlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODk5NjMsImV4cCI6MjA0ODU2NTk2M30.7Gr1RWlOQ8faw3vmkoAKnj-82PLoML2hQSs2v3xAp7M',
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVwdm54bXdnaXdta2N3eWhxZ3BlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODk5NjMsImV4cCI6MjA0ODU2NTk2M30.7Gr1RWlOQ8faw3vmkoAKnj-82PLoML2hQSs2v3xAp7M',
   ).then((_) => Get.put(AuthenticationRepository()));
 
   runApp(const App());
