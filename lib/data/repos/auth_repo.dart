@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:store_app/features/auth/presentation/login/login.dart';
 import 'package:store_app/features/auth/presentation/onboarding/onboarding.dart';
+import 'package:store_app/navigation_menu.dart';
 import 'package:store_app/utils/exceptions/format_exceptions.dart';
 import 'package:store_app/utils/exceptions/platform_exceptions.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -23,11 +24,17 @@ class AuthenticationRepository extends GetxController {
   }
 
   screenRedirect() async {
-    deviceStorage.writeIfNull('isFirstTime', true);
-    if (deviceStorage.read('isFirstTime') != true) {
-      Get.offAll(() => const LoginScreen());
+    final user = _auth.currentUser;
+
+    if (user != null) {
+      Get.off(() => const NavigationMenu());
     } else {
-      Get.offAll(() => const OnBoardingScreen());
+      deviceStorage.writeIfNull('isFirstTime', true);
+      if (deviceStorage.read('isFirstTime') != true) {
+        Get.offAll(() => const LoginScreen());
+      } else {
+        Get.offAll(() => const OnBoardingScreen());
+      }
     }
   }
 
@@ -41,11 +48,32 @@ class AuthenticationRepository extends GetxController {
         email: email,
         captchaToken: null,
       );
-      print('User created: ${response.user?.email}');
+
       return response;
     } on AuthException catch (e) {
       throw e.message;
-    }  on PlatformException catch (e) {
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } catch (e) {
+      throw 'Something went wrong.';
+    }
+  }
+
+  Future<AuthResponse> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      final response = await _auth.signInWithPassword(
+        password: password,
+        email: email,
+        captchaToken: null,
+      );
+
+      return response;
+    } on AuthException catch (e) {
+      throw e.message;
+    } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } on FormatException catch (_) {
       throw const TFormatException();
@@ -57,6 +85,7 @@ class AuthenticationRepository extends GetxController {
   Future<void> logout() async {
     try {
       await _auth.signOut();
+      screenRedirect();
     } on AuthException catch (e) {
       throw e.message;
     } on PlatformException catch (e) {
