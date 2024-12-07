@@ -20,7 +20,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
     required this.animation,
     this.showAction = false,
     this.actionText,
-    this.onActionPressed,
+    this.onActionPressed, this.size=0.8,
   });
 
   final String text;
@@ -28,6 +28,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
   final bool showAction;
   final String? actionText;
   final VoidCallback? onActionPressed;
+  final double? size;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class TAnimationLoaderWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.asset(animation, width: MediaQuery.of(context).size.width * 0.8), // Display Lottie animation
+          Lottie.asset(animation, width: MediaQuery.of(context).size.width * size!), // Display Lottie animation
           const SizedBox(height: TSizes.defaultSpace),
           Text(
             text,

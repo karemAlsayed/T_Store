@@ -5,7 +5,7 @@ import 'package:store_app/features/auth/presentation/onboarding/controllers/onbo
 import 'package:store_app/features/auth/presentation/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:store_app/features/auth/presentation/onboarding/widgets/on_boarding_next_button.dart';
 import 'package:store_app/features/auth/presentation/onboarding/widgets/onboarding_page.dart';
-import 'package:store_app/features/auth/presentation/onboarding/widgets/onboarding_skip.dart';
+
 import 'package:store_app/utils/constants/image_strings.dart';
 import 'package:store_app/utils/constants/text_strings.dart';
 class OnBoardingScreen extends StatelessWidget {
@@ -38,7 +38,7 @@ class OnBoardingScreen extends StatelessWidget {
               )
             ],
           ),
-          const  OnBoardingSkip(),
+          // const  OnBoardingSkip(),
           const OnBoardingNavigation(),
           const OnBoardingNextButton()
         ],
