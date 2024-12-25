@@ -9,7 +9,7 @@ import 'package:store_app/utils/popups/full_screen_loader.dart';
 import 'package:store_app/utils/popups/loaders.dart';
 
 class LoginController extends GetxController {
-  // static LoginController get instance => Get.find();
+  static LoginController get instance => Get.find();
 
   final locaStorage = GetStorage();
   final rememberMe = false.obs;

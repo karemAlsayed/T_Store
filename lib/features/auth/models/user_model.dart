@@ -2,8 +2,8 @@ import 'package:store_app/utils/formatters/formatter.dart';
 
 class UserModel {
   final String id;
-  final String firstName;
-  final String lastName;
+  late final String firstName;
+  late final String lastName;
   final String username;
   final String email;
   final String phoneNumber;

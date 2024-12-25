@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -7,7 +9,7 @@ import 'package:store_app/common/widgets/custom_shapes/containers/primary_header
 import 'package:store_app/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:store_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:store_app/common/widgets/texts/section_heading.dart';
-import 'package:store_app/data/repos/auth_repo.dart';
+
 import 'package:store_app/features/auth/controllers/forget_password/forget_pass_controller.dart';
 import 'package:store_app/features/personalization/address/address.dart';
 import 'package:store_app/features/personalization/profile/profile.dart';

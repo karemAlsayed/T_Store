@@ -17,6 +17,7 @@ class AuthenticationRepository extends GetxController {
 
   final deviceStorage = GetStorage();
   final _auth = Supabase.instance.client.auth;
+  User? get authUser => _auth.currentUser;
 
   @override
   void onReady() {
