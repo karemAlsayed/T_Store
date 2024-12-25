@@ -13,6 +13,20 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// Set minimum required Gradle version for the wrapper
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
+}
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Update AGP to version 8.1.1 for compileSdk 35
+        classpath 'com.android.tools.build:gradle:8.0.0'
+        // Add the Kotlin plugin, make sure to use the latest compatible version
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+    }
 }
